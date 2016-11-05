@@ -29,7 +29,7 @@ const string playlist_path="./Playlist/";
 
 public class BabeWindow : Gtk.Window //creates main window with all widgets alltogether...not ideal but...
 {
-	public Stream babe_stream;
+	public StreamBabe babe_stream;
 	public LastFm artwork;
 	public BList main_list;
 	public BList queue_list;
@@ -152,7 +152,7 @@ public class BabeWindow : Gtk.Window //creates main window with all widgets allt
 		cover=new Gtk.Image();
 		this.cover.set_from_file ("img/babe.png");
 
-        babe_stream=new Stream(); //this is the main pipeline for streaming
+        babe_stream=new StreamBabe(); //this is the main pipeline for streaming
         artwork = new LastFm(); //this is to get the album art
         babe_lyric= new LyricsManiaFetcher();
         

@@ -19,7 +19,7 @@ using TagLib;
 
 namespace BabeStream
 {
-	public class Stream	: GLib.Object
+	public class StreamBabe	: GLib.Object
 	{
 		public string song_uri;
 		public Gst.Element playbin;		 
@@ -34,7 +34,7 @@ namespace BabeStream
 		public	int64 start;
 		public	int64 end;
 	
-		public Stream()
+		public StreamBabe()
 		{
 			query = new Gst.Query.seeking (Gst.Format.TIME);
 			this.seek_enabled = false;
